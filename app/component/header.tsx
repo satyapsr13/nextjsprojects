@@ -6,18 +6,20 @@ import { CgProfile } from "react-icons/cg";
 import { IoIosSearch } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
 import { RiMenuFill } from "react-icons/ri";
+import Link from "next/link";
 interface NavItem {
   id: number;
   label: string;
+  link: string;
 }
 
 const navItems: NavItem[] = [
-  { id: 1, label: "Home" },
-  { id: 2, label: "Communities" },
-  { id: 3, label: "Speaker" },
-  { id: 4, label: "Business" },
-  { id: 5, label: "Events" },
-  { id: 6, label: "Training" },
+  { id: 1, label: "Home", link: "/" },
+  { id: 2, label: "Projects", link: "/instajob" },
+  { id: 3, label: "Impossible List", link: "/" },
+  { id: 4, label: "Contact", link: "/" },
+  { id: 5, label: "Social Work", link: "" },
+  { id: 6, label: "CV", link: "/cv" },
 ];
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,24 +31,17 @@ const Header = () => {
     <>
       <header className="relative">
         <div className="flex   bg-[#f6ede1] items-center justify-between">
-          <div className="w-auto px-16 py-8 ">
-            <Image
-              className=" bg-[#f6ede1]"
-              src={Logo}
-              alt="Next.js Logo"
-              width={180}
-              height={100}
-              priority
-            />
-          </div>
+          <div className="w-auto px-16 py-8 text-amber-600 ">Satyapsr13</div>
           <div className=" hidden  md:flex items-center justify-evenly space-x-6 ">
             {/* <div className="text-[#2e5c6f] hover:border-b-2 hover:border-b-[#2e5c6f]">
               Home
             </div> */}
             {navItems.map((item) => (
-              <div className="text-[#2e5c6f] hover:border-b-2   hover:border-b-[#2e5c6f]">
-                {item.label}
-              </div>
+              <Link href={item.link}>
+                <div className="text-[#2e5c6f] hover:border-b-2   hover:border-b-[#2e5c6f]">
+                  {item.label}
+                </div>
+              </Link>
             ))}
 
             <IoIosSearch className=" " color="#2aaae1" size={20} />
@@ -79,36 +74,13 @@ const Header = () => {
               X
             </button>
           </div>
-          <a
-            href="/"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Home
-          </a>
-          <a
-            href="/"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            About
-          </a>
-          <a
-            href="/"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Services
-          </a>
-          <a
-            href="/"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Blog
-          </a>
-          <a
-            href="/"
-            className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
-          >
-            Contact
-          </a>
+          {navItems.map((item) => (
+            <Link href={item.link}>
+              <div className="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">
+                {item.label}
+              </div>
+            </Link>
+          ))}
         </div>
       </header>
     </>
