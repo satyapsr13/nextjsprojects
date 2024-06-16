@@ -19,6 +19,20 @@ const InstaJob = () => {
       desc: "Analyze data to provide business insights.",
     },
   ];
+const qualities: Job[] = [
+  {
+    title: "Self motivated learner",
+    desc: "Develop and maintain software applications.",
+  },
+  {
+    title: "Problem Solver",
+    desc: "Oversee project timelines and deliverables.",
+  },
+  {
+    title: "Strong Communicator",
+    desc: "Analyze data to provide business insights.",
+  },
+];
 
   return (
     <div className="bg-[#090c1a] mx-auto flex justify-center">
@@ -35,6 +49,20 @@ const InstaJob = () => {
         <div className=" text-[#9ca3af] text-center">You Know</div>
         <div className="grid md:grid-cols-3 text-white gap-4 mx-auto my-8  ">
           {jobs.map((e) => (
+            <div className=" border-[0.5px] border-[#9ca3af] flex p-4">
+              <div>
+                <AiFillThunderbolt color="#49beff" size={30} />
+              </div>
+              <div className="pl-4">
+                <div className=" text-lg font-bold">{e.title}</div>
+                <div className=" text-md  ">{e.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className=" text-[#9ca3af] text-center">You are a</div>
+        <div className="grid md:grid-cols-3 text-white gap-4 mx-auto my-8  ">
+          {qualities.map((e) => (
             <div className=" border-[0.5px] border-[#9ca3af] flex p-4">
               <div>
                 <AiFillThunderbolt color="#49beff" size={30} />
