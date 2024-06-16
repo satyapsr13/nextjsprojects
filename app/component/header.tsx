@@ -16,8 +16,9 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: 1, label: "Home", link: "/" },
   { id: 2, label: "Projects", link: "/instajob" },
-  { id: 3, label: "Impossible List", link: "/" },
-  { id: 4, label: "Contact", link: "/" },
+  { id: 2, label: "Experiance", link: "/#" },
+  { id: 3, label: "Impossible List", link: "/#" },
+  { id: 4, label: "Contact", link: "/#" },
   { id: 5, label: "Social Work", link: "" },
   { id: 6, label: "CV", link: "/cv" },
 ];
@@ -30,24 +31,24 @@ const Header = () => {
   return (
     <>
       <header className="relative">
-        <div className="flex   bg-[#f6ede1] items-center justify-between">
-          <div className="w-auto px-16 py-8 text-amber-600 ">Satyapsr13</div>
+        <div className="flex   bg-secondary items-center justify-between">
+          <div className="w-auto px-16 py-8 text-white font-bold ">
+            Satyapsr13
+          </div>
           <div className=" hidden  md:flex items-center justify-evenly space-x-6 ">
             {/* <div className="text-[#2e5c6f] hover:border-b-2 hover:border-b-[#2e5c6f]">
               Home
             </div> */}
             {navItems.map((item) => (
               <Link href={item.link}>
-                <div className="text-[#2e5c6f] hover:border-b-2   hover:border-b-[#2e5c6f]">
+                <div className="text-white hover:text-primary hover:border-b-2   hover:border-b-[#2e5c6f]">
                   {item.label}
                 </div>
               </Link>
             ))}
-
-            <IoIosSearch className=" " color="#2aaae1" size={20} />
           </div>
-          <div className="w-auto p-8 flex items-center ">
-            {/* <div></div> */}
+          {/* <div className="w-auto p-8 flex items-center ">
+            
             <div className="w-36 h-12 flex justify-center rounded-3xl text-center items-center bg-[#f07443] text-white mx-4">
               Try for free <FaArrowRight className="m-2" />
             </div>
@@ -58,7 +59,7 @@ const Header = () => {
               className="m-2 md:hidden "
               size={30}
             />
-          </div>
+          </div> */}
         </div>
         {/* Mobile Menu */}
         <div
@@ -88,3 +89,4 @@ const Header = () => {
 };
 
 export default Header;
+// https://forward.digital/
