@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "../public/images/logo.png";
+import DevImage from "../public/images/dev.png";
 import { CgProfile } from "react-icons/cg";
 import { IoIosSearch } from "react-icons/io";
 import { FaArrowRight } from "react-icons/fa";
@@ -8,162 +9,54 @@ import Home2 from "../public/images/home2.png";
 import { FaVideo } from "react-icons/fa";
 import { MdAddCall } from "react-icons/md";
 import { FaMicrophoneAlt } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import Footer from "./component/footer";
+import IconButton from "./component/iconButton";
+import Project from "./component/project";
 export default function Home() {
   return (
-    <div className=" bg-red-500   ">
-    {/* <div className=" bg-[#f6ede1]  "> */}
+    <div className="  ">
       <Header />
-      <section>
-        <div className="  grid md:grid-cols-2  gap-4 max-w-7xl    md:mx-auto ">
-          <div className="  items-center justify-center w-full ">
+
+      <section className="bg-secondary mx-auto h-screen px-8 md:px-16 overflow-hidden ">
+        <div
+          className="md:h-screen  pt-32 pb-8    text-center md:pt-1 bg-secondary  md:flex  items-center justify-evenly "
+          id="home"
+        >
+          <div className=" text-white  p-2 w-full md:w-1/2 bg-slate-500  flex flex-col items-start text-start ">
+            <h2 className="py-2 text-lg  ">Hello, It's Me</h2>
+            <h1 className="text-5xl font-bold py-2">Satya Prakash</h1>
+            <p className="py-2 text-xl">
+              I'm <span className="text-primary">Software Engineer</span>{" "}
+            </p>
+
+            <p className=" py-2">
+              SDE @ Styava Pvt Ltd. I am good at Mobile application Development
+              & Web Development. Currently learning NextJs & Springboot
+              (Microservices).
+            </p>
             <div>
-              <p className="md:text-6xl text-xl text-center font-bold text-[#003b55]">
-                Connecting developers and tech experts
-              </p>
-            </div>
-            <div className="flex pt-8">
-              <div className="w-36 h-12 hidden   justify-center rounded-3xl text-center items-center bg-[#f07443] text-white mx-4">
-                Sign Up
-              </div>
-
-              <p className="text-[#a48e6e] text-ls text-center">
-                A community where developer connect and learn from tech expert
-                for free
-              </p>
+              {/* <IconButton
+                icon={FaLinkedinIn}
+                hoverColor="#00eeff"
+                size="w-12 h-12"
+                iconSize="w-10 h-10"
+                borderColor="white"
+                link="https://www.linkedin.com/in/satyapsr13/"
+              /> */}
             </div>
           </div>
-          <div className=" flex items-center justify-center w-full">
-            <Image
-              className=" bg-[#f6ede1]"
-              src={Home2}
-              alt="Next.js Logo"
-              width={400}
-              height={400}
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* <section className="">
-        <div className="w-full  bg-[#2aaae1] ">
-          <div className="w-full flex justify-center  -mt-12 ">
-            <div className="w-16 h-16 mx-2 flex cursor-pointer items-center justify-center rounded-full bg-[#f6ede1]">
-              <FaVideo size={25} color="#003b55" />
-            </div>
-            <div className="w-16 h-16 mx-2 flex items-center cursor-pointer justify-center rounded-full bg-[#f6ede1]">
-              <MdAddCall size={25} color="#003b55" />
-            </div>{" "}
-            <div className="w-16 h-16 mx-2 flex items-center cursor-pointer justify-center rounded-full bg-[#f6ede1]">
-              <FaMicrophoneAlt size={25} color="#003b55" />
+          <div className=" bg-red-400  w-full md:w-1/2 flex justify-center items-center mx-auto ">
+            <div className="w-64 h-64">
+              <Image src={DevImage} alt={""} />
             </div>
           </div>
-          <h1 className="text-white flex justify-center text-xl my-4">
-            Recorded Training
-          </h1>
+          <div></div>
         </div>
-      </section> */}
+      </section>
+      <Project/>
+      
 
-      <section className="bg-[#2aaae1] p-4  ">
-        <div className=" sm:h-96 md:h-72 grid md:grid-cols-4 mx-auto gap-4 max-w-xl justify-center ">
-          <div className="  md:p-1 bg-[#dcfbff] flex flex-col items-center justify-around  rounded-2xl">
-            <Image
-              src={"https://pngfre.com/wp-content/uploads/Ladies-Bag-17.png"}
-              width={50}
-              height={50}
-              alt={""}
-            />
-            <h1 className="text-center text-[#2aaae1] font-bold">
-              Beiggner Friendly
-            </h1>
-          </div>
-          <div className="w-full bg-[#dcfbff] md:col-span-2 flex flex-col items-center justify-evenly  rounded-2xl">
-            <Image
-              src={"https://pngfre.com/wp-content/uploads/Ladies-Bag-17.png"}
-              width={50}
-              height={50}
-              alt={""}
-            />
-            <h1 className="text-center text-[#2aaae1] font-bold">
-              Beiggner Friendly
-            </h1>
-          </div>
-          <div className="w-full bg-[#dcfbff] flex flex-col items-center justify-evenly md:row-span-2 rounded-2xl">
-            <Image
-              src={"https://pngfre.com/wp-content/uploads/Ladies-Bag-17.png"}
-              width={50}
-              height={50}
-              alt={""}
-            />
-            <h1 className="text-center text-[#2aaae1] font-bold">
-              Beiggner Friendly
-            </h1>
-          </div>
-          <div className="w-full bg-[#dcfbff] flex flex-col items-center justify-evenly md:col-span-2 rounded-2xl">
-            <Image
-              src={"https://pngfre.com/wp-content/uploads/Ladies-Bag-17.png"}
-              width={50}
-              height={50}
-              alt={""}
-            />
-            <h1 className="text-center text-[#2aaae1] font-bold">
-              Beiggner Friendly
-            </h1>
-          </div>
-          <div className="w-full  bg-[#dcfbff] flex flex-col items-center justify-evenly  rounded-2xl">
-            {" "}
-            <Image
-              src={"https://pngfre.com/wp-content/uploads/Ladies-Bag-17.png"}
-              width={50}
-              height={50}
-              alt={""}
-            />
-            <h1 className="text-center text-[#2aaae1] font-bold">
-              Beiggner Friendly
-            </h1>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="w-full mx-auto  bg-[#003b55] flex-col items-center  justify-center">
-          <div className="text-white text-center"> Events</div>
-          <div>
-            {" "}
-            <p className="text-white text-center m-16">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-              labore asperiores accusamus beatae! Corporis quo esse magnam rem
-              qui voluptatum?
-            </p>{" "}
-          </div>
-          <div className="sm:min-h-96 md:min-h-64 max-w-4xl mx-auto  grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 p-4  ">
-            <div className="   bg-white rounded-xl">sa</div>
-            <div className="  bg-[#2aaae1] rounded-xl"></div>
-            <div className="  bg-white rounded-xl"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* <div className="h-64"></div> */}
-      <section>
-        <div className="w-full bg-[#f6ede1] p-8">
-          <h2 className="text-orange-500 text-center ">Review</h2>
-          <h1 className="text-center text-[#003b55] text-2xl font-extrabold my-8">
-            Hear what our members say
-          </h1>
-          {/* <div></div> */}
-          <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 gap-4 min-h-64  ">
-            <div className="  rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-            <div className=" rounded-2xl  bg-white   border-black border-2"></div>
-          </div>
-        </div>
-      </section>
       <Footer />
     </div>
   );

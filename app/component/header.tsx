@@ -15,12 +15,12 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { id: 1, label: "Home", link: "/" },
-  { id: 2, label: "Projects", link: "/instajob" },
+  { id: 2, label: "Projects", link: "#project" },
   { id: 2, label: "Experiance", link: "/#" },
   { id: 3, label: "Impossible List", link: "/#" },
-  { id: 4, label: "Contact", link: "/#" },
-  { id: 5, label: "Social Work", link: "" },
-  { id: 6, label: "CV", link: "/cv" },
+  // { id: 4, label: "Contact", link: "/#" },
+  // { id: 5, label: "Social Work", link: "" },
+  { id: 6, label: "CV", link: "/" },
 ];
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,12 +30,12 @@ const Header = () => {
   };
   return (
     <>
-      <header className="relative">
-        <div className="flex   bg-secondary items-center justify-between">
-          <div className="w-auto px-16 py-8 text-white font-bold ">
+      <header className="relative shadow-xl">
+        <div className="flex  sticky w-full px-8 md:px-16  bg-secondary items-center justify-between">
+          <div className="w-auto hover:text-primary cursor-pointer text-2xl py-8 text-white font-bold ">
             Satyapsr13
           </div>
-          <div className=" hidden  md:flex items-center justify-evenly space-x-6 ">
+          <div className=" hidden  lg:flex items-center justify-evenly space-x-6 ">
             {/* <div className="text-[#2e5c6f] hover:border-b-2 hover:border-b-[#2e5c6f]">
               Home
             </div> */}
@@ -65,7 +65,7 @@ const Header = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } absolute w-full top-0 md:hidden bg-black`}
+          } absolute w-full top-0 bloc  bg-black`}
         >
           <div className="flex justify-end">
             <button
