@@ -7,12 +7,12 @@ const Footer = () => {
     <>
       <div className="w-full  mx-auto py-8 bg-[#0b1c23] grid md:grid-cols-3 gap-8  items-center justify-evenly">
         <div className="w-full  ">
-          <h1 className="text-white md:text-4xl lg:text-6xl text-2xl">
-            Styava Dev
+          <h1 className="text-white md:text-lg lg:text-xl text-2xl">
+            Copyright © 2024 by Satya Prakash | All Rights Reserved
           </h1>
-          <h1 className="text-white text-md mt-4">2024@ all rights reserved</h1>
+          {/* <h1 className="text-white text-md mt-4">2024@ all rights reserved</h1> */}
         </div>
-        <div className="w-full flex  text-white items-center justify-evenly">
+        {/* <div className="w-full flex  text-white items-center justify-evenly">
           <div>
             <h2>Home</h2>
             <h2>Contact</h2>
@@ -32,7 +32,7 @@ const Footer = () => {
           <FaInstagramSquare size={30} /> <FaFacebookF size={30} />
           <FaFacebookMessenger size={30} />
           <FaInstagramSquare size={30} />
-        </div>
+        </div> */}
         {/* <div></div> */}
       </div>
     </>
